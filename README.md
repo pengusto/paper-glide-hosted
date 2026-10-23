@@ -1,10 +1,18 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner/paper-glide-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner/paper-glide-light.png">
+  <img src="assets/banner/paper-glide-light.png" alt="Paper Glide: a penguin launches a paper airplane through falling stones and scissors above a city" width="2172">
+</picture>
+
+*Banner illustration generated with AI; the gameplay recording below shows the actual prototype. [Artwork notes](assets/banner/README.md).*
+
 # Paper Glide
 
 ### A little paper. A big city. One more try.
 
 Fly through a pixel-art skyline, dodge scissors, and collect stones for points. **Paper Glide** is a small Unity arcade prototype inspired by Flappy Bird, with directional jumps and a rock–paper–scissors twist.
 
-**[Play in your browser](https://pengusto.github.io/paper-glide-hosted/)** · [Explore the Unity project](https://github.com/pengusto/paper-glide-hosted/tree/code)
+**[Play in your browser](https://pengusto.github.io/paper-glide-web/)** · [Explore the Unity project](https://github.com/pengusto/paper-glide-web/tree/code)
 
 ![Paper Glide prototype gameplay: a paper plane flying through a blue pixel-art city](./gameplay.gif)
 
@@ -32,8 +40,8 @@ Scissors end the round; collecting stones increases the score. The source also i
 The default **`main` branch is a static WebGL export**, ready to serve. You do not need Unity to run it. You need Git and Python 3 for this example:
 
 ```sh
-git clone --branch main --single-branch https://github.com/pengusto/paper-glide-hosted.git
-cd paper-glide-hosted
+git clone --branch main --single-branch https://github.com/pengusto/paper-glide-web.git
+cd paper-glide-web
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
@@ -50,7 +58,7 @@ Serve the repository root: `index.html` loads files from both `Build/` and `Temp
 
 ## Inspect or edit the Unity project
 
-The separate **[`code` branch](https://github.com/pengusto/paper-glide-hosted/tree/code)** contains `Assets/`, `Packages/`, and `ProjectSettings/`. It records **Unity 2022.3.4f1** in `ProjectSettings/ProjectVersion.txt`; `main` cannot be opened as a complete Unity project.
+The separate **[`code` branch](https://github.com/pengusto/paper-glide-web/tree/code)** contains `Assets/`, `Packages/`, and `ProjectSettings/`. It records **Unity 2022.3.4f1** in `ProjectSettings/ProjectVersion.txt`; `main` cannot be opened as a complete Unity project.
 
 Before reusing or redistributing source assets, review the rights notes below. To work with an authorized local copy, open the `code` branch project in Unity 2022.3.4f1 with WebGL Build Support. The enabled scene is `Assets/Scenes/MainGame.unity`; WebGL exports are made through **File → Build Settings → WebGL**.
 
@@ -63,8 +71,8 @@ The source and hosted export live on separate branches. Rebuilding the source an
 - Cityscape credited by the original README to **Free Game Assets**: [Modern City Backgrounds Pixel Art](https://free-game-assets.itch.io/free-city-backgrounds-pixel-art). The source's background license file points to [Craftpix's file licenses](https://craftpix.net/file-licenses/).
 - The preview above is the existing `gameplay.gif`; its embedded game art retains its own rights.
 
-**No project-wide license is included.** Public availability is not a blanket permission to reuse the code, build, or artwork. The Unity source includes third-party packages with separate terms. In particular, [`Assets/_External/Feel/license.txt`](https://github.com/pengusto/paper-glide-hosted/blob/code/Assets/_External/Feel/license.txt) prohibits redistribution of its uncompiled contents while allowing use in a compiled game. Source redistribution rights need clarification; a future license for original project code would not override third-party terms.
+**No project-wide license is included.** Public availability is not a blanket permission to reuse the code, build, or artwork. The Unity source includes third-party packages with separate terms. In particular, [`Assets/_External/Feel/license.txt`](https://github.com/pengusto/paper-glide-web/blob/code/Assets/_External/Feel/license.txt) prohibits redistribution of its uncompiled contents while allowing use in a compiled game. Source redistribution rights need clarification; a future license for original project code would not override third-party terms.
 
 ## Feedback
 
-Found a reproducible problem? [Open an issue](https://github.com/pengusto/paper-glide-hosted/issues) with your browser, operating system, whether you used the hosted or local build, and steps to reproduce it. Feature ideas are welcome; this prototype has no promised roadmap.
+Found a reproducible problem? [Open an issue](https://github.com/pengusto/paper-glide-web/issues) with your browser, operating system, whether you used the hosted or local build, and steps to reproduce it. Feature ideas are welcome; this prototype has no promised roadmap.
