@@ -3,9 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Paper Glide</title>
+    <title>Paper Glide – Paper Plane Arcade Prototype | Pengusto</title>
+    <meta name="description" content="Play Paper Glide, a Unity WebGL arcade prototype by Pengusto. Fly through a pixel-art city, avoid scissors and collect stones for points.">
+    <link rel="canonical" href="https://pengusto.github.io/paper-glide-hosted/">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      #unity-container.unity-desktop { position: relative; left: auto; top: auto; transform: none; width: 960px; margin: 24px auto; }
+      #unity-container.unity-mobile { position: relative; height: 100vh; }
+      .game-info { max-width: 720px; margin: 32px auto; padding: 0 24px; font: 16px/1.6 Arial, sans-serif; }
+    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -23,6 +30,14 @@
         <div id="unity-build-title">Paper Glide</div>
       </div>
     </div>
+    <article class="game-info" aria-labelledby="about-game">
+      <h1 id="about-game">Paper Glide</h1>
+      <p>Paper Glide is a Unity arcade prototype by Enis Uysal (Pengusto). Fly a paper plane through a pixel-art city, avoid scissors and collect stones for points. The game combines directional jumps with a rock–paper–scissors twist.</p>
+      <h2>Playing the prototype</h2>
+      <p>Give the game canvas focus and use a desktop browser with WebGL support. This is an early proof of concept: bugs, placeholder art and long load times are expected. Mobile input and layout still need device testing.</p>
+      <p><a href="https://github.com/pengusto/paper-glide-hosted#take-a-flight">Read the controls and known build limitations</a>. The Unity source and hosted export are on separate branches, and their input mappings have not been compared in a fresh gameplay session.</p>
+      <p><a href="https://github.com/pengusto/paper-glide-hosted">View Paper Glide project notes and build files on GitHub</a> · <a href="https://github.com/pengusto/paper-glide-hosted/tree/code">Explore the Unity source</a>.</p>
+    </article>
     <script>
 
       var container = document.querySelector("#unity-container");
